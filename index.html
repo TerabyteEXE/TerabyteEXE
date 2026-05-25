@@ -3,31 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Retro Computer Store (2000)</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Your Name</h1>
-            <p class="subtitle">Software Engineer & Tech Enthusiast</p>
-        </header>
+
+    <div class="site-container">
         
-        <main>
-            <section class="about">
-                <h2>About Me</h2>
-                <p>Welcome to my personal space on the web. I build projects, write code, and explore technology.</p>
-            </section>
-            
-            <section class="links">
-                <h2>Find Me On</h2>
-                <ul>
-                    <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-                    <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
-                    <li><a href="mailto:your@email.com">Email</a></li>
-                </ul>
-            </section>
+        <header>
+            <nav class="tab-navigation">
+                <a href="#" class="nav-tab logo-tab">[Logo]</a>
+                <a href="#" class="nav-tab">Store</a>
+                <a href="#" class="nav-tab">iReview</a>
+                <a href="#" class="nav-tab">iTools</a>
+                <a href="#" class="nav-tab">iCards</a>
+                <a href="#" class="nav-tab">QuickTime</a>
+                <a href="#" class="nav-tab">Support</a>
+            </nav>
+            <nav class="sub-navigation">
+                <a href="#">Hot News</a>
+                <a href="#">Hiring</a>
+                <a href="#">Hardware</a>
+                <a href="#">Software</a>
+                <a href="#">Made4Mac</a>
+                <a href="#">Education</a>
+                <a href="#">Creative</a>
+                <a href="#">Small Biz</a>
+                <a href="#">Developer</a>
+            </nav>
+        </header>
+
+        <main class="hero-section">
+            <div class="hero-text">
+                <h1>Hardware</h1>
+                <h2>Power Tower G4.</h2>
+                <p class="hero-sub">500MHz now available.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-computer.png" alt="Power Tower G4 Computer">
+            </div>
         </main>
+
+        <div class="timestamp">
+            February 26, 2000 02:13 AM PST
+        </div>
+
+        <section class="promo-container">
+            <div class="promo-headline">
+                <span>Hot News Headlines</span>
+                <span>Enhanced Laptop Line With Special Edition.</span>
+            </div>
+            
+            <div class="promo-grid">
+                <div class="promo-item">
+                    <p class="promo-title">iBook.<br>Black Tie Optional.</p>
+                    <img src="images/item-ibook.png" alt="iBook Laptop">
+                </div>
+                
+                <div class="promo-item border-left">
+                    <img src="images/item-powerbook.png" alt="PowerBook Laptop">
+                    <p class="promo-title font-small">The new PowerBook.<br><span class="light-text">Make desktop movies on the go.</span></p>
+                </div>
+                
+                <div class="promo-item border-left center-content">
+                    <p class="partner-text">Join the award-winning online service provider for the Mac.</p>
+                    <img src="images/item-network.png" alt="Network Partner" class="partner-logo">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="search-bar">
+                <input type="text" id="search-input" name="search">
+                <button type="button">Search</button>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Site Map</a> | 
+                <a href="#">Search Tips</a> | 
+                <a href="#">Options</a> | 
+                <a href="#">Keywords</a>
+            </div>
+
+            <div class="global-selector">
+                <label for="site-select">Visit other sites around the world:</label>
+                <select id="site-select">
+                    <option value="">Choose...</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="jp">Japan</option>
+                </select>
+            </div>
+
+            <div class="copyright">
+                <a href="#">Contact Us</a> | <a href="#">Privacy Notice</a><br>
+                Copyright © 2000 Computer Company, Inc. All rights reserved.<br>
+                1-800-MY-COMPUTER
+            </div>
+        </footer>
+
     </div>
+
 </body>
 </html>
