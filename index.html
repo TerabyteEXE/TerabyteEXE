@@ -1,125 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYSTEM_OS // Portfolio</title>
+    <title>TERMINAL // OS_2000</title>
     
     <link rel="stylesheet" href="css/css.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+
     <style>
-        .font-orbitron { font-family: 'Orbitron', sans-serif; }
-        .font-mono-tech { font-family: 'Share Tech Mono', monospace; }
+        .font-terminal { font-family: 'VT323', monospace; }
+        .font-code { font-family: 'Courier Prime', monospace; }
     </style>
 </head>
-<body class="bg-[#e4e7eb] text-zinc-800 dark:bg-[#0c0f12] dark:text-zinc-400 font-mono-tech tech-grid min-h-screen flex flex-col justify-between">
+<body class="bg-[#c0c0c0] text-black dark:bg-[#060a0d] dark:text-[#33ff33] font-code min-h-screen p-4 flex items-center justify-center transition-colors duration-200">
 
-    <header class="bg-[#d1d5db] dark:bg-[#14191f] border-b-2 border-white/20 dark:border-zinc-800 px-4 py-2 flex justify-between items-center text-xs tracking-wider">
-        <div class="flex items-center gap-4">
-            <span class="font-orbitron font-black text-blue-600 dark:text-cyan-400">SYS_V2.000</span>
-            <span class="opacity-40">|</span>
-            <span class="hidden sm:inline text-zinc-500 dark:text-zinc-500">STATUS: ONLINE</span>
-        </div>
+    <div class="w-full max-w-2xl border-2 border-outset bg-[#d8d8d8] dark:bg-[#121820] dark:border-[#223322] p-2 shadow-[4px_4px_0px_#000000] relative overflow-hidden">
         
-        <button id="theme-toggle" class="y2k-panel bg-[#c5c9d0] dark:bg-[#1a2027] hover:bg-[#b8bcc4] dark:hover:bg-[#222a33] px-3 py-1 text-zinc-700 dark:text-zinc-300 active:translate-y-[1px] font-orbitron font-bold uppercase text-[10px] transition-colors cursor-pointer">
-            Toggle Mode
-        </button>
-    </header>
+        <div class="absolute inset-0 pointer-events-none opacity-10 dark:opacity-100 z-50 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]"></div>
 
-    <main class="max-w-4xl w-full mx-auto p-6 flex-grow grid grid-cols-1 md:grid-cols-3 gap-6 items-start mt-4">
-        
-        <div class="y2k-panel bg-[#dcdfe4] dark:bg-[#11161b] p-4 rounded-sm space-y-4 md:col-span-1 shadow-md">
-            <div class="bg-zinc-900 dark:bg-black p-2 border border-zinc-400/30 text-center relative overflow-hidden group">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent h-full w-full pointer-events-none animate-pulse"></div>
-                <div class="text-4xl my-6 filter dark:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">💿</div>
+        <div class="bg-[#000080] dark:bg-[#1a2536] text-white dark:text-[#00ffcc] p-1 flex justify-between items-center text-xs font-bold border-b border-white">
+            <div class="flex items-center gap-2">
+                <span>⚡ CORE_CONSOLE_V1.0</span>
             </div>
-            
-            <div class="space-y-1">
-                <h1 class="font-orbitron font-black text-xl text-zinc-900 dark:text-white uppercase tracking-tight">
-                    User_01
-                </h1>
-                <p class="text-xs text-blue-600 dark:text-emerald-400 font-bold tracking-widest">[ ARCHITECT ]</p>
-            </div>
-            
-            <p class="text-xs leading-relaxed text-zinc-600 dark:text-zinc-400 border-t border-zinc-300 dark:border-zinc-800 pt-3">
-                Building multi-layered structural web ecosystems. Navigating aesthetics from the dawn of the millennium. 
-            </p>
+            <button id="power-btn" class="bg-[#c0c0c0] text-black border border-outset px-2 py-0.5 text-[10px] font-mono font-bold uppercase active:border-inset cursor-pointer">
+                [THEME_SWITCH]
+            </button>
         </div>
 
-        <div class="space-y-6 md:col-span-2">
+        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
             
-            <div class="y2k-panel bg-[#dcdfe4] dark:bg-[#11161b] p-6 relative overflow-hidden shadow-md">
-                <div class="absolute top-0 right-0 p-2 text-[9px] text-zinc-400 dark:text-zinc-600 font-orbitron font-bold">MSG_REF_404</div>
-                <h2 class="font-orbitron font-black text-lg text-zinc-900 dark:text-white mb-2 uppercase">Core_Environment</h2>
-                <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                    Welcome to a high-fidelity workspace layout. This shell features hardware-style bevels, customizable system grids, and instant execution toggles.
-                </p>
-            </div>
-
-            <div class="y2k-panel bg-[#dcdfe4] dark:bg-[#11161b] p-4 shadow-md">
-                <div class="flex justify-between items-center mb-4 border-b border-zinc-300 dark:border-zinc-800 pb-2">
-                    <span class="font-orbitron text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-400">App_Directory</span>
-                    <span class="text-[10px] text-zinc-400">INDEX // 01</span>
+            <div class="md:col-span-1 border border-inset p-2 bg-[#b5b5b5] dark:bg-[#090d12] flex flex-col items-center justify-between min-h-[200px]">
+                <div class="w-full bg-black border-2 border-inset p-4 text-center text-4xl shadow-[inset_0_0_10px_#00ff00]">
+                    <span class="animate-pulse inline-block filter dark:drop-shadow-[0_0_5px_#33ff33]">💿</span>
                 </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    
-                    <a href="apps/appname/index.html" class="y2k-panel bg-[#cdd1d8] dark:bg-[#171e25] p-3 block hover:bg-[#c1c5cd] dark:hover:bg-[#1e2730] hover:border-blue-500 dark:hover:border-cyan-400/50 group transition-all">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <span class="text-lg bg-white/40 dark:bg-zinc-900 p-1.5 rounded-sm">🕹️</span>
-                                <div>
-                                    <h3 class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">App_One</h3>
-                                    <p class="text-[10px] text-zinc-500 dark:text-zinc-500">Launch Module</p>
-                                </div>
-                            </div>
-                            <span class="text-xs opacity-30 group-hover:opacity-100 transition-opacity">>></span>
-                        </div>
-                    </a>
-
-                    <a href="apps/another-app/index.html" class="y2k-panel bg-[#cdd1d8] dark:bg-[#171e25] p-3 block hover:bg-[#c1c5cd] dark:hover:bg-[#1e2730] hover:border-blue-500 dark:hover:border-cyan-400/50 group transition-all">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <span class="text-lg bg-white/40 dark:bg-zinc-900 p-1.5 rounded-sm">🎹</span>
-                                <div>
-                                    <h3 class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">App_Two</h3>
-                                    <p class="text-[10px] text-zinc-500 dark:text-zinc-500">Audio Platform</p>
-                                </div>
-                            </div>
-                            <span class="text-xs opacity-30 group-hover:opacity-100 transition-opacity">>></span>
-                        </div>
-                    </a>
-
+                
+                <div class="w-full mt-3 text-[11px] leading-tight space-y-1 font-mono uppercase text-zinc-700 dark:text-[#33ff33]/80">
+                    <div>USR: NODE_OPERATOR</div>
+                    <div>LOC: 127.0.0.1</div>
+                    <div class="text-[#0000ff] dark:text-[#00ffcc]">SYS: ONLINE</div>
                 </div>
             </div>
 
-        </div>
-    </main>
+            <div class="md:col-span-2 flex flex-col justify-between space-y-3">
+                
+                <div class="border border-inset bg-white dark:bg-black p-3 text-xs md:text-sm h-32 overflow-y-auto shadow-[inset_2px_2px_4px_rgba(0,0,0,0.2)] dark:text-[#33ff33]">
+                    <p class="font-bold text-black dark:text-white mb-1">> INITIALIZING ENVIRONMENT...</p>
+                    <p class="text-zinc-600 dark:text-[#33ff33]/60">Loading physical directory assets... Success.</p>
+                    <p class="mt-2">Welcome to a modular structural interface. No modern frameworks. No flat shapes. Just raw terminal utility.</p>
+                </div>
 
-    <footer class="bg-[#d1d5db] dark:bg-[#14191f] border-t-2 border-white/20 dark:border-zinc-800 px-6 py-3 text-center text-[10px] tracking-wide text-zinc-500">
-        <p>SYSTEM TERMINAL // ALL RIGHTS RESERVED TO OPERATOR. CURRENT_YEAR: 2026</p>
-    </footer>
+                <div class="border border-outset bg-[#cbd0d8] dark:bg-[#161e26] p-2">
+                    <div class="text-[10px] font-bold uppercase tracking-wider text-zinc-600 dark:text-[#00ffcc] mb-2 border-b border-zinc-400 dark:border-zinc-800 pb-1">
+                        Execute Modules //
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="apps/appname/index.html" class="border-2 border-outset bg-[#c0c0c0] dark:bg-[#1f2936] p-2 text-center block hover:bg-[#d4d4d4] dark:hover:bg-[#2a374a] active:border-inset group transition-all">
+                            <span class="text-xl block group-hover:scale-110 transition-transform">🕹️</span>
+                            <span class="text-[11px] font-bold block mt-1 uppercase tracking-tight text-black dark:text-white">APP_ONE</span>
+                        </a>
+
+                        <a href="apps/another-app/index.html" class="border-2 border-outset bg-[#c0c0c0] dark:bg-[#1f2936] p-2 text-center block hover:bg-[#d4d4d4] dark:hover:bg-[#2a374a] active:border-inset group transition-all">
+                            <span class="text-xl block group-hover:scale-110 transition-transform">💾</span>
+                            <span class="text-[11px] font-bold block mt-1 uppercase tracking-tight text-black dark:text-white">APP_TWO</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mt-3 bg-[#b5b5b5] dark:bg-[#0d1117] border border-inset p-1 flex justify-between items-center text-[10px] font-mono uppercase tracking-wide text-zinc-600 dark:text-zinc-500">
+            <span>INDEX_REF: 0x00FF2A</span>
+            <div class="flex items-center gap-1.5">
+                <span>SYS_READY</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_#10b981] animate-ping"></span>
+            </div>
+        </div>
+
+    </div>
 
     <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
+        const powerBtn = document.getElementById('power-btn');
         const htmlElement = document.documentElement;
 
-        themeToggleBtn.addEventListener('click', () => {
+        powerBtn.addEventListener('click', () => {
             if (htmlElement.classList.contains('dark')) {
                 htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
+                localStorage.setItem('retro-theme', 'light');
             } else {
                 htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
+                localStorage.setItem('retro-theme', 'dark');
             }
         });
 
-        // Check for saved theme preference on page load
-        if (localStorage.getItem('theme') === 'light') {
+        if (localStorage.getItem('retro-theme') === 'light') {
             htmlElement.classList.remove('dark');
         }
     </script>
