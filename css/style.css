@@ -1,40 +1,255 @@
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
+/* --- Global Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: "Lucida Grande", "Geneva", "Arial", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 20px 0;
 }
 
-.container {
-    max-width: 600px;
-    padding: 20px;
+/* Constrain the whole site to look like a classic desktop page */
+.site-container {
     width: 100%;
+    max-width: 800px;
+    padding: 0 10px;
 }
 
-h1, h2 {
-    color: #ffffff;
+/* --- Navigation Header --- */
+.tab-navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-bottom: 1px solid #999;
+    background: linear-gradient(to bottom, #f2f2f2, #e4e4e4);
+    padding: 0 10px;
+    border-radius: 6px 6px 0 0;
 }
 
-a {
-    color: #00adb5;
+.nav-tab {
+    display: block;
+    padding: 6px 14px;
+    background: #e1e1e1;
+    border: 1px solid #adadad;
+    border-bottom: none;
+    margin-right: 4px;
     text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0 1px 0 #fff;
 }
 
-a:hover {
+.nav-tab:hover {
+    background: #ededed;
+}
+
+.logo-tab {
+    background: #fff;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+/* Sub-navigation bar */
+.sub-navigation {
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.sub-navigation a {
+    text-decoration: none;
+    color: #444;
+    font-size: 11px;
+}
+
+.sub-navigation a:hover {
     text-decoration: underline;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #ffffff;
 }
 
-li {
-    margin-bottom: 10px;
+.hero-text h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 64px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    color: #333;
+}
+
+.hero-sub {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    color: #999;
+    font-style: italic;
+}
+
+.hero-image img {
+    max-width: 320px;
+    height: auto;
+}
+
+/* Timestamp placement */
+.timestamp {
+    text-align: right;
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 15px;
+    padding-right: 10px;
+}
+
+/* --- Lower Grid Section --- */
+.promo-container {
+    border: 1px solid #b5b59a;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.promo-headline {
+    background-color: #cbcb9c;
+    border-bottom: 1px solid #b5b59a;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    gap: 15px;
+}
+
+.promo-headline span:first-child {
+    color: #555533;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 180px;
+}
+
+.promo-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.border-left {
+    border-left: 1px solid #e2e2d0;
+}
+
+.promo-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.font-small {
+    font-size: 16px;
+}
+
+.light-text {
+    color: #666;
+    font-size: 14px;
+}
+
+.promo-item img {
+    max-width: 130px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.center-content {
+    justify-content: center;
+    gap: 10px;
+}
+
+.partner-text {
+    font-size: 11px;
+    color: #444;
+}
+
+.partner-logo {
+    max-width: 100px;
+}
+
+/* --- Footer Elements --- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 40px;
+}
+
+.search-bar input {
+    width: 220px;
+    padding: 2px 4px;
+    font-size: 12px;
+    border: 1px solid #999;
+}
+
+.search-bar button {
+    padding: 1px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.footer-links {
+    font-size: 11px;
+}
+
+.footer-links a {
+    color: #0000ee;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.global-selector {
+    font-size: 12px;
+    color: #333;
+}
+
+.global-selector select {
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.copyright a {
+    color: #0000ee;
+    text-decoration: none;
 }
