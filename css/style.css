@@ -1,4 +1,7 @@
-{
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,86 +12,12 @@ body {
     color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
+    padding: 24px 16px;
 }
 
 .container {
     max-width: 1050px;
     margin: 0 auto;
-}
-
-/* Header Styles */
-.site-header {
-    border-bottom: 1px solid #222222;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-
-.site-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 15px;
-}
-
-/* Navigation Capsule Pills */
-.site-nav {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-link {
-    color: #aaaaaa;
-    text-decoration: none;
-    padding: 6px 16px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-radius: 20px;
-    transition: background 0.2s, color 0.2s;
-}
-
-.nav-link:hover {
-    color: #ffffff;
-}
-
-.nav-link.active {
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: 600;
-}
-
-/* Two-Column Grid layout */
-.main-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .main-layout {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Content & Box Styling */
-.bio-box, .sidebar-box {
-    background-color: #111111;
-    border: 1px solid #1c1c1c;
-    border-radius: 4px;
-    padding: 20px;
-}
-
-.bio-box {
-    display: flex;
-    gap: 20px;
-}
-
-.bio-img {
-    width: 100px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 2px;
 }
 
 a {
@@ -100,94 +29,231 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Sidebar & Socials */
-.social-icons {
+/* ==========================================================================
+   2. HEADER & NAVIGATION (CAPSULE PILLS)
+   ========================================================================== */
+.site-header {
+    border-bottom: 1px solid #222222;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+
+.site-title a {
+    color: #ffffff;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.site-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.nav-link {
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background-color: #161616;
+}
+
+.nav-link.active {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   3. LAYOUT GRID CONFIGURATION
+   ========================================================================== */
+.main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* ==========================================================================
+   4. CONTENT CARDS & BOX MODULES
+   ========================================================================== */
+.bio-box, .sidebar-box, .project-card {
+    background-color: #111111;
+    border: 1px solid #1c1c1c;
+    border-radius: 4px;
+    padding: 24px;
+}
+
+.bio-box {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.bio-avatar-placeholder {
+    font-size: 3.5rem;
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .bio-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.section-heading {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   5. SOCIAL BUTTONS GRID WITH BRANDING COLORS
+   ========================================================================== */
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 24px;
 }
 
 .social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 32px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 3px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 4px;
+    transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-/* Match colors from screenshots */
-.youtube { background-color: #cc181e; }
-.github { background-color: #24292e; }
-.patreon { background-color: #f96854; }
-.twitter { background-color: #1da1f2; }
-.instagram { background-color: #e1306c; }
+.social-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+/* Brand Palette Overlays */
+.github    { background-color: #24292e; }
+.goodreads { background-color: #553b08; }
+.youtube   { background-color: #cc181e; }
+.wt-live   { background-color: #cf9b13; }
+
+/* ==========================================================================
+   6. SIDEBAR LIST MODULES
+   ========================================================================== */
+.sidebar-box {
+    margin-bottom: 24px;
+}
 
 .sidebar-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #222;
-    padding-bottom: 5px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 6px;
+    color: #eeeeee;
 }
 
-.post-list {
+.item-list {
     list-style: none;
+}
+
+.item-list li {
     font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
 }
 
-.post-list li {
-    margin-bottom: 10px;
-}
-
-.date {
-    color: #777777;
+.meta-date {
+    color: #666666;
     font-size: 0.85rem;
+    white-space: nowrap;
 }
 
-.all-posts-link {
+.all-links-btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 8px;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
-/* Footer & Search */
+/* ==========================================================================
+   7. SITE FOOTER & UTILITIES
+   ========================================================================== */
 .site-footer {
-    margin-top: 50px;
-    padding-top: 20px;
+    margin-top: 60px;
+    padding-top: 30px;
     text-align: center;
-    border-top: 1px solid #222;
+    border-top: 1px solid #222222;
 }
 
 .search-container {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .search-container input {
     background-color: #ffffff;
-    border: 1px solid #444;
-    padding: 6px 10px;
+    border: 1px solid #444444;
+    border-right: none;
+    padding: 8px 14px;
     color: #000000;
-    width: 250px;
+    font-size: 0.9rem;
+    width: 260px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
 }
 
 .search-container button {
-    background-color: #f0f0f0;
-    color: #000;
-    border: 1px solid #444;
-    padding: 6px 12px;
+    background-color: #e0e0e0;
+    color: #000000;
+    border: 1px solid #444444;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.12s;
 }
 
-.shield-placeholder {
-    font-size: 2rem;
-    margin-bottom: 15px;
+.search-container button:hover {
+    background-color: #ffffff;
 }
 
 .copyright {
-    color: #666666;
+    color: #555555;
     font-size: 0.8rem;
+}
+
+.copyright a {
+    color: #777777;
 }
