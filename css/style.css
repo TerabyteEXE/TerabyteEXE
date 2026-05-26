@@ -131,28 +131,35 @@ a:hover {
 }
 
 /* ==========================================================================
-   5. SOCIAL BUTTONS GRID WITH BRANDING COLORS
+   FIXED SOCIAL ICONS GRID Layout
    ========================================================================== */
 .social-icons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Forms 4 equal columns across the sidebar */
     gap: 8px;
     margin-bottom: 24px;
+    width: 100%; /* Ensures it fills its container without spilling out */
 }
 
 .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
+    display: flex !important;       /* Forces flex centering layout */
+    align-items: center;            /* Centers vertically */
+    justify-content: center;         /* Centers horizontally */
+    height: 40px;                   /* Strict button height */
     color: #ffffff;
     border-radius: 4px;
+    text-decoration: none;
+    overflow: hidden;               /* Prevents raw path leaks */
     transition: transform 0.12s ease, filter 0.12s ease;
 }
 
+/* CRITICAL FIX: Explicitly bounds the raw SVG vector dimensions */
 .social-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 20px !important;         /* Caps icon width tightly */
+    height: 20px !important;        /* Caps icon height tightly */
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .social-btn:hover {
@@ -160,6 +167,11 @@ a:hover {
     filter: brightness(1.2);
 }
 
+/* Platform Colors Mapping */
+.github    { background-color: #24292e; }
+.goodreads { background-color: #553b08; }
+.youtube   { background-color: #cc181e; }
+.wt-live   { background-color: #cf9b13; }
 /* Brand Palette Overlays */
 .github    { background-color: #24292e; }
 .goodreads { background-color: #553b08; }
