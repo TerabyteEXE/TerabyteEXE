@@ -98,6 +98,29 @@
             <p class="copyright">All content copyright TerabyteEXE. Hosted securely via GitHub Pages. <a href="#top">Top of page</a>.</p>
         </footer>
     </div>
+<iframe
+  src="/music_player.html"
+  style="
+    border: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    height: 75px;
+    z-index: 1000;
+  "
+  title="Music Player"
+></iframe>
 
+<style>
+  @media (min-width: 900px) {
+    iframe[title='Music Player'] {
+      left: 20px;
+      right: auto;
+      width: 350px;
+    }
+  }
+</style>
 </body>
 </html>
